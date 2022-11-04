@@ -1,0 +1,16 @@
+Iterator : Iterable<E>
+要素を順番にスキャンしていくインタフェース（API）を定める役
+has method and next method
+
+ConcreteIterator : BookShelfIterator
+Iterator役が定めたインタフェース（API）を実際に実装する役
+スキャンするために必要な情報を持っている必要がある
+
+
+Aggregate : Iterable<E>
+Iterator役を作り出すインタフェース（API）を定める役
+「私が持っている要素を順番にスキャンしてくれる人」を作り出すメソッド
+
+ConcreteAggregate : BookShelf
+Aggregate役が定めたインタフェース（API）を実際に実装する役
+ConcreteIterator役のインスタンスを作り出す
